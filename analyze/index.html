@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HowJamaica Chart Analyzer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand__logo">📈</span>
+        <div>
+          <p class="brand__eyebrow">HowJamaica</p>
+          <h1>Bry Chart Analyzer</h1>
+        </div>
+      </div>
+      <p class="site-header__subtitle">
+        Upload your chart image or CSV data to generate a quick, shareable analysis summary.
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="upload-card">
+        <div class="upload-card__left">
+          <h2>Upload your file</h2>
+          <p>
+            Drag and drop a <strong>.png</strong>, <strong>.jpg</strong>, or <strong>.csv</strong> file here.
+            We will create a quick summary and preview for your report.
+          </p>
+          <div class="dropzone" id="dropzone" aria-label="File upload dropzone">
+            <input id="fileInput" type="file" accept=".png,.jpg,.jpeg,.csv" />
+            <div class="dropzone__content">
+              <div class="dropzone__icon">⬆️</div>
+              <p>Drop file here or <span class="dropzone__cta">browse</span></p>
+              <small>Max 25MB. Images or CSV only.</small>
+            </div>
+          </div>
+          <div class="upload-actions">
+            <button class="btn" id="analyzeButton" type="button" disabled>
+              Analyze file
+            </button>
+            <button class="btn btn--ghost" id="clearButton" type="button" disabled>
+              Clear
+            </button>
+          </div>
+          <p class="helper-text" id="helperText">
+            Tip: CSV should include a header row and numeric columns for automatic stats.
+          </p>
+        </div>
+        <aside class="upload-card__right">
+          <div class="preview" id="preview">
+            <p class="preview__placeholder">Your preview will appear here.</p>
+          </div>
+          <div class="file-meta" id="fileMeta"></div>
+        </aside>
+      </section>
+
+      <section class="analysis">
+        <div class="analysis__header">
+          <h2>Analysis summary</h2>
+          <p>Review the highlights generated from your upload.</p>
+        </div>
+        <div class="analysis__content" id="analysisContent">
+          <div class="analysis__empty">
+            <p>No analysis yet. Upload a file to get started.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Need deeper insights? Export this summary and share it with your analytics team.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
