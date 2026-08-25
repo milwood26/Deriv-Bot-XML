@@ -1,9 +1,45 @@
-# Dependencies
-.psci_modules
-.spago
-bower_components
-node_modules
+```gitignore
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
 
-# Generated files
-.psci
-output
+# Dependencies
+node_modules/
+venv/
+.venv/
+.env
+.env.local
+*.env.*
+
+# Build directories
+dist/
+build/
+target/
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Editors and IDEs
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Coverage and testing
+coverage/
+htmlcov/
+.coverage
+.mypy_cache/
+.pytest_cache/
+.gradle/
+```
